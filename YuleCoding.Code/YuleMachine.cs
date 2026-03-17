@@ -4,15 +4,19 @@ public class YuleMachine
 {
     public bool IsItChristmasEve(int dayOfDecember)
     {
-        throw new NotImplementedException();
+        if(dayOfDecember != 24) { return false; }
+        return true;
     }
     public string ChristmasGreeting(string nameToGreet)
     {
-        throw new NotImplementedException();
+        return $"Merry Christmas, {nameToGreet}";
     }
     public string IsItChristmasEveYet(int dayOfDecember)
     {
-        throw new NotImplementedException();
+        if (dayOfDecember == null) throw new ArgumentNullException();
+        if (dayOfDecember == 24) { return "Yes!"; }
+        if (dayOfDecember < 24) { return "Not yet!"; }
+        if (dayOfDecember > 24) { return "It's over!"; }
     }
     public bool ChristmasPoemChecker(string poem)
     {
